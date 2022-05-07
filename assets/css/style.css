@@ -3,11 +3,10 @@
 
 @import "{{ site.theme }}";
 
-#header_wrap_pink {
-  background: #ffoo8a;
-  background: -moz-linear-gradient(top, #ff008a, #ffoo8a);
-  background: -webkit-linear-gradient(top, #ff008a, #ffoo8a);
-  background: -ms-linear-gradient(top, #ff008a, #ffoo8a);
-  background: -o-linear-gradient(top, #ff008a, #ffoo8a);
-  background: linear-gradient(to top, #ff008a, #ffoo8a);
+.header_pink {
+  padding: 60px;
+  text-align: center;
+  background: #ff008a;
+  color: white;
+  font-size: 30px;
 }
