@@ -4,10 +4,10 @@
 @import "{{ site.theme }}";
 
 #header_wrap_pink {
-  background: #212121;
-  background: -moz-linear-gradient(top, #ff008a, #212121);
-  background: -webkit-linear-gradient(top, #ff008a, #212121);
-  background: -ms-linear-gradient(top, #ff008a, #212121);
-  background: -o-linear-gradient(top, #ff008a, #212121);
-  background: linear-gradient(to top, #ff008a, #212121);
+  background: #ffoo8a;
+  background: -moz-linear-gradient(top, #ff008a, #ffoo8a);
+  background: -webkit-linear-gradient(top, #ff008a, #ffoo8a);
+  background: -ms-linear-gradient(top, #ff008a, #ffoo8a);
+  background: -o-linear-gradient(top, #ff008a, #ffoo8a);
+  background: linear-gradient(to top, #ff008a, #ffoo8a);
 }
