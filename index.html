@@ -1,50 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <link rel="stylesheet" href="/assets/style.css">
-<title>Urban Ski Patrol</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>  
-/* Container for iframe */
-.container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 300%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: black;
+  line-height: 1.8;
 }
 
-/* Then style the iframe to fit in the container div with full height and width */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  /* Can maybe do an image rather than just pink
+  background-image: url('/w3images/parallax1.jpg');*/
+  background: #ff008a;
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
 }
 </style>
 </head>
-  
 <body>
 
-<div class="header_pink">
-  <h1>Urban Ski Patrol</h1>
-  <p>Edinburgh Roller Ski Tuition</p>
-  <br>
-  <a href="/about.html">About</a>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#prices" class="w3-bar-item w3-button">PRICES</a>
+    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#prices" class="w3-bar-item w3-button" onclick="toggleFunction()">PRICES</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
 </div>
 
-<div class="content">
-  <h3>Learn to Cross-Country Ski and have fun exploring the capital of Scotland!</h3>
-  <p> Roller Skiing is the summer version of Nordic / Cross-Country Skiing. Most of the equipment is identical with the exception of the Skis, which are replaced by shorter more robust "Roller Skis" with wheels to let us move on roads and cycle paths.</p>
-  <p>Fill out the form or e-mail <a href="mailto:peter@urban-ski-patrol.co.uk">peter@urban-ski-patrol.co.uk</a> to find out more and book a session!</p>
-</div>
- 
-<div class="container">
-  <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScCaHlYd2ZYmR_t0_g9xkx0bPCib4ftgD6jA2EP4BBv7XwBfA/viewform?embedded=true" width="640" height="1351" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">URBAN <span class="w3-hide-small">SKI</span> PATROL</span>
+   </div>
+  <div class="w3-display-middle" style="white-space:nowrap;"> 
+   </br></br></br></br></br>
+    <span class="w3-center w3-padding-large w3-black w3-large w3-wide w3-animate-opacity">Edinburgh Roller Ski Tuition</span>
   </div>
-  
+  <div class="w3-display-middle" style="white-space:nowrap;"> 
+   </br></br></br></br></br> </br></br></br></br></br>
+    <span class="w3-center w3-padding-large w3-large w3-black w3-animate-opacity"><a href="mailto:peter@urban-ski-patrol.co.uk">peter@urban-ski-patrol.co.uk</a></span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">URBAN SKIING</h3>
+  <p class="w3-center"><em>Learn to Cross-Country Ski and have fun exploring the capital of Scotland!
+  </em></p>
+  <p>Most of the year there is no snow in Scotland. But this doesn't need to stop you Nordic skiing. Roller Skis are a great way to prepare for next winter and with many great bike paths in central Scotland they are fun in their own right. </br></br>
+Most of the equipment is identical with the exception of the skis themselves, which are replaced by the shorter more robust "Roller Skis" with wheels to allow use on roads and cycle paths.</p>
+  <div class="w3-row">
+  <h3 class="w3-center">COACH PETER</h3>
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+    <p>My name is Peter and I've been Cross-Country Skiing and Rollerskiing for over 15 years. I'm a Snowsport Scotland qualified Level 2 coach with experience coaching skiers at both the Fife Rollerski Club and the London XC Ski Club. You can see my full profile here at <a href="http://www.rollerski.co.uk/profilepeter.html">rollerski.co.uk</a>.</p>
+  </div>
+</div>
+
+<!-- Container (Prices Section) -->
+<div class="w3-content w3-container w3-padding-64" id="prices">
+  <h3 class="w3-center">PRICES</h3>
+  <p class="w3-center"><em>I recommend 90 minutes per session. I can also arrange equipment hire with suitable advance notice. Prices are matched to <a href="http://www.rollerski.co.uk/instructprivate.html#:~:text=You%20can%20book%201%2Dhour%20and%2090minute%20sessions%20online%20below.&text=Please%20call%20or%20email%20us,3026%205195%20or%2007968%20286129.">rollerski.co.uk</a> procing.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <h1>1 person</h1>
+      <h1>£80*</h1>
+      <p><em>* For a 90 minutes session. £90 with equipment hire</em></p>
+    </div>
+
+    <div class="w3-col m3">
+     <h1>2-3 people</h1>
+      <h1>£90*</h1>
+      <p><em>* For a 90 minutes session. £110 with equipment hire</em></p>
+    </div>
+
+    <div class="w3-col m3">
+      <h1>4-5 people</h1>
+      <h1>£100*</h1>
+      <p><em>* For a 90 minutes session. £120 with equipment hire</em></p>
+    </div>
+    
+    <div class="w3-col m3">
+      <h3>None of these</h3>
+      <p>Get in touch! We'll sort something out :)</p>
+    </div>
+</div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">BOOK A SESSION</h3>
+  <p class="w3-center"><em>Let's get things rolling!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Edinburgh, UK<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: <a href="mailto:peter@urban-ski-patrol.co.uk">peter@urban-ski-patrol.co.uk</a> <br>
+      </div>
+      </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
 </html>
